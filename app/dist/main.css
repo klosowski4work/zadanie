@@ -120,6 +120,9 @@
   margin-top: -5px;
   display: block; }
 
+.pages {
+  margin-bottom: 2em; }
+
 @media (max-width: 30em) {
   .pages .panel {
     margin-left: -15px;
@@ -147,3 +150,15 @@
   cursor: pointer;
   font-weight: 400;
   background-color: #8fabdc; }
+
+.page-footer {
+  position: fixed;
+  bottom: 0px;
+  text-align: right;
+  height: 2em;
+  background-color: #2B4D70;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0.2em; }
+  .page-footer a {
+    color: #e9f1ff; }
