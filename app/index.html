@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ApplicationCtrl" ng-init='init()' class="no-js"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Zadanie ENP(Angular)</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.min.css">
+  
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-material-design/dist/css/ripples.css">  
+  <link rel="stylesheet" href="dist/main.css">
+</head>
+<body>
+    <div class="header">   
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="header-title">Common Credits</h1>
+                </div>   
+            </div>    
+        </div>  
+    </div>
+    
+    <div class="pages">
+        <div class="container" >
+            <div class="row">
+                <div class="col-xs-12" ng-view></div>
+            </div>
+        </div>
+        
+    </div>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"></script>
+  
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+  <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-ui-select/dist/select.js"></script>
+
+  
+  <script src="components/movies/form/form.js"></script>
+  <script src="components/movies/form/form.dir.js"></script>
+  <script src="components/movies/results/results.js"></script>
+  <script src="components/movies/results/results.dir.js"></script>
+  <script src="components/movies/history/history.js"></script>
+  <script src="components/movies/history/history.dir.js"></script>
+  <script src="components/movies/movieSelect/movieSelect.js"></script>
+  <script src="components/movies/movieSelect/movieSelect.dir.js"></script>
+  <script src="components/movies/movies.js"></script>
+  <script src="components/movies/movies.svc.js"></script>
+  <script src="view/view.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

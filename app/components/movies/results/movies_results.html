@@ -1,0 +1,35 @@
+<div class="results">
+    
+    <div class="results-details" >
+        <div class="results-details-movie" ng-style="colStyle"
+             ng-repeat="movie in moviesDetails">
+            <div class="results-details-movie-title">
+                {{movie.Title}}
+            </div>
+            <div class="results-details-movie-poster">
+                <img ng-src="{{movie.Poster}}"/>
+            </div>
+            <div class="results-details-movie-plot">
+                {{movie.Plot}}
+            </div>
+        </div>        
+    </div>
+    <div class="results-compared" >
+        <div ng-if="compared.commonActors.length">
+            <h3 class="results-compared-title">COMMON ACTORS</h3>
+            <ul class="results-compared-list">
+                <li class="results-compared-list-element" ng-repeat="actor in compared.commonActors">
+                    {{actor}}
+                </li>
+            </ul>
+        </div> 
+        <div ng-if="compared.commonDirectors.length">
+            <h3 class="results-compared-title">COMMON DIRECTORS</h3>
+            <ul class="results-compared-list">
+                <li class="results-compared-list-element" ng-repeat="director in compared.commonDirectors">
+                    {{director}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

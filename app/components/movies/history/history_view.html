@@ -1,0 +1,37 @@
+<!-- Button trigger modal -->
+<div class="history" ng-if="isSupport" ng-init="init()">
+    <a href="javascript:void(0)" data-toggle="modal" data-target="#{{id}}" class="btn btn-default btn-fab btn-fab-mini" ng-if="history.length > 0">
+        <i class="material-icons">history</i>
+    </a>
+    <div class="modal fade" id="{{id}}" role="dialog">
+        <div class="modal-lg modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Last compared</h3>         
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-hover">                        
+                        <tr>
+                            <th>Movie 1</th>
+                            <th>Movie 2</th>
+                        </tr>
+                        <tr ng-repeat="pos in history"
+                            ng-click="compareFromHistory(pos)">
+                            <td ng-repeat="movie in pos">{{movie.title}}</td>                          
+                        </tr>
+                       
+                    </table>
+                </div>
+                <div class="modal-footer">
+                   
+                    <button type="button" class="btn btn-raised btn-danger btn-sm" data-dismiss="modal" ng-click="clearHistory()">
+                        <i class="material-icons">delete</i>
+                    </button>
+                    <button type="button" class="btn btn-raised btn-default btn-sm" data-dismiss="modal">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

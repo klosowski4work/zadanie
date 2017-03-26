@@ -1,0 +1,51 @@
+.results{
+    .results-details{
+        display:table-row;
+        
+        .results-details-movie{
+            display:table-cell; 
+            text-align:center;
+            border:solid 1px lightgrey;
+            &+.results-details-movie{
+                border-left:0px;
+            }
+            &-title{
+                padding:1em;
+                font-size:16px;
+                font-weight: 600;
+            }
+            &-plot{
+                padding:1em;
+                font-size:12px;
+                
+            }
+        }
+        .results-details-movie-poster{
+            img{
+                height: 15em;
+                max-width: 15em;
+            }
+        }
+    }
+    .results-compared{
+        .results-compared-title{
+            background-color: lightgrey;
+            padding: 0.1em;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+        .results-compared-list{            
+            list-style-type:none;
+            padding-left:0px;
+            border:solid 1px lightgrey;
+            &-element{
+                &:nth-child(even){
+                    background-color:whitesmoke;
+                }
+                padding-left:1em;
+            }
+        }
+    }
+}

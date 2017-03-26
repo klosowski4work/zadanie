@@ -1,0 +1,149 @@
+.movie-select {
+  /*.ui-select-bootstrap .ui-select-choices-row>span:focus, 
+    .ui-select-bootstrap .ui-select-choices-row>span:hover{
+        background-color:red;
+    }*/ }
+  .movie-select .ui-select-container > input.form-control {
+    margin-top: 10px !important; }
+  .movie-select .ui-select-container > .btn-default-focus {
+    box-shadow: none;
+    background-color: inherit;
+    outline: none;
+    -webkit-tap-highlight-color: none; }
+  .movie-select .ui-select-container span.btn.btn-default.form-control.ui-select-toggle:hover {
+    background-color: inherit; }
+  .movie-select .ui-select-bootstrap i.glyphicon.glyphicon-remove {
+    top: 5px;
+    color: red; }
+  .movie-select .ui-select-bootstrap .ui-select-match-text span {
+    width: calc(100% - 2.2em); }
+  .movie-select .ui-select-bootstrap .ui-select-choices-row.active > span {
+    background-color: inherit;
+    color: inherit; }
+  .movie-select .ui-select-bootstrap .ui-select-choices-row > span:focus, .movie-select .ui-select-bootstrap .ui-select-choices-row > span:hover {
+    background-color: #8fabdc !important;
+    font-weight: 400; }
+  .movie-select .ui-select-choices-row:nth-child(even) {
+    background-color: #e6efff; }
+  .movie-select .movie-choice .movie-choice-poster {
+    display: inline-block;
+    width: 4em; }
+  .movie-select .movie-choice .movie-choice-details {
+    display: inline-block; }
+    .movie-select .movie-choice .movie-choice-details .movie-choice-title {
+      font-weight: 600; }
+
+@media (max-width: 30em) {
+  .movie-select .movie-choice .movie-choice-poster {
+    display: none; } }
+
+@media (max-width: 30em), (max-height: 30em) {
+  .movie-select .ui-select-container.open {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: whitesmoke;
+    left: 0px;
+    z-index: 10; }
+    .movie-select .ui-select-container.open::before {
+      content: 'Start typing...';
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+      color: #aaa; }
+    .movie-select .ui-select-container.open > input.form-control {
+      position: fixed;
+      margin-top: 0px !important;
+      padding: 1em;
+      top: 0px;
+      left: 0px;
+      background: white;
+      height: 50px;
+      z-index: 11;
+      border-bottom: solid 2px #d9d9d9;
+      width: 100% !important; }
+  .movie-select .ui-select-choices.ui-select-choices-content {
+    min-height: calc(100% - 52px);
+    position: fixed !important;
+    top: 52px !important;
+    z-index: 11;
+    overflow-wrap: break-word; } }
+
+.results .results-details {
+  display: table-row; }
+  .results .results-details .results-details-movie {
+    display: table-cell;
+    text-align: center;
+    border: solid 1px lightgrey; }
+    .results .results-details .results-details-movie + .results-details-movie {
+      border-left: 0px; }
+    .results .results-details .results-details-movie-title {
+      padding: 1em;
+      font-size: 16px;
+      font-weight: 600; }
+    .results .results-details .results-details-movie-plot {
+      padding: 1em;
+      font-size: 12px; }
+  .results .results-details .results-details-movie-poster img {
+    height: 15em;
+    max-width: 15em; }
+
+.results .results-compared .results-compared-title {
+  background-color: lightgrey;
+  padding: 0.1em;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400; }
+
+.results .results-compared .results-compared-list {
+  list-style-type: none;
+  padding-left: 0px;
+  border: solid 1px lightgrey; }
+  .results .results-compared .results-compared-list-element {
+    padding-left: 1em; }
+    .results .results-compared .results-compared-list-element:nth-child(even) {
+      background-color: whitesmoke; }
+
+.header {
+  color: #e9f1ff;
+  background-color: #2B4D70; }
+  .header h1.header-title {
+    font-weight: 400; }
+
+.form-group.has-error .help-block {
+  margin-top: -5px;
+  display: block; }
+
+@media (max-width: 30em) {
+  .pages .panel {
+    margin-left: -15px;
+    margin-right: -15px; }
+  .btn-xs-full {
+    width: 100%; }
+  .history {
+    position: absolute;
+    right: 1em; } }
+
+@media (min-width: 30em) {
+  .header {
+    min-height: 5em;
+    padding-bottom: 3em; }
+  .pages {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    margin-top: 80px; }
+  .history {
+    position: absolute;
+    right: 2em; } }
+
+.history .table-hover > tbody > tr:hover td {
+  cursor: pointer;
+  font-weight: 400;
+  background-color: #8fabdc; }

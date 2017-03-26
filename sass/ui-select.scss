@@ -1,0 +1,118 @@
+.movie-select{    
+    .ui-select-container{
+        &>input.form-control{
+            margin-top:10px !important;    
+            
+           
+        }     
+        &>.btn-default-focus{
+            box-shadow: none;
+            background-color:inherit; 
+            outline:none;
+            -webkit-tap-highlight-color:none;
+        } 
+        span.btn.btn-default.form-control.ui-select-toggle:hover {
+            background-color:inherit;
+        }
+    }  
+    .ui-select-bootstrap{
+        i.glyphicon.glyphicon-remove{
+            top:5px;
+            color:red;
+        }
+        .ui-select-match-text{
+            span{
+                width:calc(100% - 2.2em);
+            }
+        }
+       
+        .ui-select-choices-row{
+            &.active>span{
+                background-color:inherit;  
+                color:inherit;
+            }            
+            &>span{
+                &:focus, &:hover{
+                    background-color:#8fabdc !important;
+                    font-weight:400;
+                }    
+            }  
+        }
+    } 
+    /*.ui-select-bootstrap .ui-select-choices-row>span:focus, 
+    .ui-select-bootstrap .ui-select-choices-row>span:hover{
+        background-color:red;
+    }*/
+    .ui-select-choices-row{
+        &:nth-child(even){
+            background-color:#e6efff;
+        }
+    }
+    .movie-choice{
+        .movie-choice-poster{
+            display:inline-block;
+            width:4em;
+        }
+        .movie-choice-details{
+            display:inline-block;
+            .movie-choice-year{}
+            .movie-choice-title{
+                font-weight:600;
+            }        
+        }
+    }
+}
+@media(max-width:30em){
+    .movie-select{
+        .movie-choice{
+            .movie-choice-poster{
+                display:none;
+            }
+        }
+    }
+}
+@media(max-width:30em),(max-height:30em){    
+    .movie-select{
+        .ui-select-container.open{
+            position: fixed;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            background-color: whitesmoke;
+            left: 0px;
+            z-index: 10;
+            &::before{
+                content: 'Start typing...';
+                position: absolute;
+                top: 60px;
+                width: 100%;
+                text-align: center;
+                font-size: 30px;
+                font-weight: 800;
+                color: #aaa;
+            }
+               
+            
+            &>input.form-control{
+                position: fixed;
+                margin-top: 0px !important;
+                padding:1em;
+                top: 0px;
+                left: 0px;
+                background: white;            
+                height: 50px;
+                z-index:11;
+                border-bottom:solid 2px #d9d9d9; 
+                width:100% !important;
+            }     
+        }
+        .ui-select-choices.ui-select-choices-content{
+            min-height:calc(100% - 52px);
+            position: fixed !important;
+            top: 52px !important;
+            z-index:11;
+            overflow-wrap: break-word;
+        }
+    }
+}

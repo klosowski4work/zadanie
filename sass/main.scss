@@ -1,0 +1,66 @@
+$header-color       : #072660;
+$header-font-color  : #e9f1ff;
+
+$base-color         : #2B4D70; 
+$font-color         : #C3D5F6;
+$panel-color        : #6C94DD;
+
+@import "ui-select.scss";
+@import "results.scss";
+
+.header{    
+    h1.header-title{
+        font-weight:400;
+    }
+    color:$header-font-color ;
+    background-color:$base-color ;
+}
+
+.form-group.has-error{
+    .help-block{
+        margin-top:-5px;
+        display:block;
+    }
+}
+@media(max-width:30em){
+    .header{
+    } 
+    .pages{
+        .panel{
+            margin-left:-15px;
+            margin-right:-15px;
+        }
+    }
+    .btn-xs-full{
+        width:100%;
+    }
+    .history{
+        position:absolute;
+        right:1em;
+    }
+}
+@media(min-width:30em){
+    .header{
+        min-height:5em;
+        padding-bottom:3em;
+    } 
+    .pages{
+        position:absolute;
+        width:100%;
+        top:0px;
+        margin-top:80px;
+    }
+    .history{
+        position:absolute;
+        right:2em;
+    }
+}
+.history{    
+    .table-hover>tbody>tr:hover{
+        td{ 
+            cursor:pointer;
+            font-weight:400;
+            background-color:#8fabdc;
+        }
+    }
+}

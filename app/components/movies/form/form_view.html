@@ -1,0 +1,24 @@
+<form>
+    <div class="row">
+        
+        <movies-history id="history"></movies-history>
+
+        <div class="form-group col-md-6" ng-class="{'has-error': !!firstMovie.error}">  
+            <label class="control-label" for="firstMovie">Movie 1</label>  
+            <movie-select ng-model="firstMovie" id="firstMovie" name="firstMovie"></movie-select>
+            <p ng-if="1" class="help-block">{{firstMovie.error}}</p>
+        </div>
+        <div class="form-group col-md-6" ng-class="{'has-error': !!secondMovie.error}">  
+            <label class="control-label">Movie 2</label>  
+            <movie-select ng-model="secondMovie" id="secondMovie" name="secondMovie"></movie-select>
+            <p ng-if="1" class="help-block">{{secondMovie.error}}</p>
+        </div>
+    </div>
+    <div class="form-group clearfix">
+        <button class="btn btn-xs-full btn-raised btn-default pull-right"
+                ng-click="compare()"
+                type="submit" value="Check" action="submit">Compare</button>
+        <div class="clearfix"></div>
+    </div>
+
+</form>

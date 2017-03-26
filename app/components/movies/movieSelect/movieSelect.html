@@ -1,0 +1,30 @@
+<div class="movie-select">
+    <ui-select ng-model="selected.value">
+        <ui-select-match allow-clear="true">
+            <span ng-bind="$select.selected.Title"></span>
+            <input type="hidden" name="{{input.name}}" id="{{input.id}}" value="{{ $select.selected }}" invalid>
+
+        </ui-select-match>
+        <ui-select-choices repeat="item in items track by item.imdbID"
+                           refresh="refreshSuggestions($select)" 
+                           refresh-delay="400"
+                           minimum-input-length="1">
+            <div class="movie-choice" ng-if="item.Title">
+                <div class="movie-choice-poster">
+                    <img ng-if="item.Poster !== 'N/A'" src="{{item.Poster}}" width="40">
+                </div>
+                <div class="movie-choice-details">
+                    <div class="movie-choice-year">{{item.Year}}</div>
+                    <div class="movie-choice-title">{{item.Title}}</div>
+                </div> 
+            </div>
+            <button 
+              ng-if="$index == $select.items.length-1 && showLoadMore"
+              class="btn btn-raised btn-xs btn-success" 
+              style="width: 100%; margin-top: 5px;" 
+              ng-click="refreshSuggestions($select, $event);"
+              ng-disabled="loading">Load more...</button>  
+        </ui-select-choices>
+
+    </ui-select>
+</div>
