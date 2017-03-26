@@ -5,8 +5,7 @@ var concat = require('gulp-concat');
 var ngAnnotate = require('gulp-ng-annotate');
 
 gulp.task('js', function(){
-//    gulp.src(['ng/module.js','ng/**/*.js'])
-    gulp.src(['app/**/*.js}','!assets/*.js'])
+    gulp.src(['app/**/*.js}'])
         .pipe(sourcemaps.init())
             .pipe(concat('app.js'))
             .pipe(ngAnnotate())
