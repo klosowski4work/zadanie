@@ -35,6 +35,7 @@ angular.module( 'app.movies.results',[])
     $scope.$on('app.movies:compare', function(event, movieIds) { 
         
         MoviesSvc.getByIds(movieIds).then(function(res){
+            $scope.loading = true;
             var movies = [];
             res.forEach(function(item,idx,arr){
                 movies.push(item.data);
@@ -46,11 +47,13 @@ angular.module( 'app.movies.results',[])
                 };
             });
             compare(movies).then(function(compared){
+//                    $scope.loading = false;
                 $scope.$apply(function () {
                     $scope.compared = compared;
                 });
             });
         }).catch(function(err){
+//            $scope.loading = false;
             console.log(err);
         });
 
