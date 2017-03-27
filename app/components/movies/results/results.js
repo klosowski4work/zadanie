@@ -52,9 +52,9 @@ angular.module( 'app.movies.results',[])
             compare(movies).then(function(compared){
                 $scope.loading = false;
                 if(!compared.commonActors.length){
-                    $scope.addAlert('warning','Common Actors not found.');
+                    $scope.addAlert('warning','Common actors not found.');
                 } else if(!compared.commonDirectors.length){
-                    $scope.addAlert('warning','Common Directors not found.');
+                    $scope.addAlert('warning','Common directors not found.');
                 } 
                 $scope.addAlert('success','The comparison was successful.');
               
