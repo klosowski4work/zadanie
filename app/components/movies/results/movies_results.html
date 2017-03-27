@@ -16,20 +16,26 @@
     </div>
     <div class="results-compared" >
         <div ng-if="compared.commonActors.length">
-            <h3 class="results-compared-title">COMMON ACTORS</h3>
+            <h4 class="results-compared-title">COMMON ACTORS</h4>
             <ul class="results-compared-list">
                 <li class="results-compared-list-element" ng-repeat="actor in compared.commonActors">
                     {{actor}}
                 </li>
             </ul>
         </div> 
+        <div ng-if="moviesDetails.length && !compared.commonActors.length">            
+            <h4 class="results-compared-title">THERE ARE NO COMMON ACTORS</h4>
+        </div>        
         <div ng-if="compared.commonDirectors.length">
-            <h3 class="results-compared-title">COMMON DIRECTORS</h3>
+            <h4 class="results-compared-title">COMMON DIRECTORS</h4>
             <ul class="results-compared-list">
                 <li class="results-compared-list-element" ng-repeat="director in compared.commonDirectors">
                     {{director}}
                 </li>
             </ul>
         </div>
+        <div ng-if="moviesDetails.length && !compared.commonDirectors.length">            
+            <h4 class="results-compared-title">THERE ARE NO COMMON DIRECTORS</h4>
+        </div>        
     </div>
 </div>
