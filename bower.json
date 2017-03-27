@@ -16,6 +16,7 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "angular-ui-select": "^0.19.6",
-    "ripples": "^1.0.4"
+    "ripples": "^1.0.4",
+    "angular-material": "^1.1.3"
   }
 }

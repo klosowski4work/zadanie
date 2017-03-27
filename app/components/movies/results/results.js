@@ -47,13 +47,13 @@ angular.module( 'app.movies.results',[])
                 };
             });
             compare(movies).then(function(compared){
-//                    $scope.loading = false;
+                $scope.loading = false;
                 $scope.$apply(function () {
                     $scope.compared = compared;
                 });
             });
         }).catch(function(err){
-//            $scope.loading = false;
+            $scope.loading = false;
             console.log(err);
         });
 
