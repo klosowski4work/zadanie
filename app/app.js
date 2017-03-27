@@ -3,6 +3,7 @@
 angular.module('app', [
     'ngRoute',
     'ngSanitize',
+    'app.alerts',
     'app.view',
     'app.movies',
     'ui.select'
@@ -12,5 +13,5 @@ angular.module('app', [
   $routeProvider.otherwise({redirectTo: '/view'});
 }])  
 .controller('ApplicationCtrl', function ($scope) {
-
+    
 });

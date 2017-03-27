@@ -19,13 +19,16 @@ angular.module( 'app.movies.results',[])
                 commonActors:splitAndTrim(first.Actors,','),
                 commonDirectors:splitAndTrim(first.Director,',')
             };        
-        return new Promise(function(resolve){           
+        return new Promise(function(resolve,reject){           
             moviesArr.forEach(function(movie,index,arr){
                 var actors = splitAndTrim(movie.Actors,','),
                     directors = splitAndTrim(movie.Director,',');
                 compared.commonActors = intersection(compared.commonActors, actors); 
                 compared.commonDirectors = intersection(compared.commonDirectors, directors);                
                 if (index === arr.length - 1){ 
+                    if(!compared.commonActors.length && !compared.commonActors.length){                        
+                        reject('Common actors and directors not found.');
+                    } 
                     resolve(compared);
                 }
            });
@@ -48,8 +51,20 @@ angular.module( 'app.movies.results',[])
             });
             compare(movies).then(function(compared){
                 $scope.loading = false;
+                if(!compared.commonActors.length){
+                    $scope.addAlert('warning','Common Actors not found.');
+                } else if(!compared.commonDirectors.length){
+                    $scope.addAlert('warning','Common Directors not found.');
+                } 
+                $scope.addAlert('success','The comparison was successful.');
+              
                 $scope.$apply(function () {
                     $scope.compared = compared;
+                });
+            }, function(msg){
+                $scope.addAlert('warning',msg);
+                $scope.$apply(function () {
+                    $scope.compared = '';
                 });
             });
         }).catch(function(err){

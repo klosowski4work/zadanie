@@ -1,0 +1,4 @@
+<div ng-repeat="alert in alerts" ng-click="removeAlert(alert.id)" class="alert alert-dismissible alert-{{alert.type}}">
+  <button type="button" class="close" ng-click="removeAlert(alert.id)" data-dismiss="alert">×</button>
+  <p>{{alert.msg}}</p>
+</div>
